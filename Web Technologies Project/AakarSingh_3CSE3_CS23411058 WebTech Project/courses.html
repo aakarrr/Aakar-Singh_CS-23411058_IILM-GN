@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - StudyBuddy AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">StudyBuddy <span class="ai-badge">AI</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html" class="active">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard">
+        <header class="hero" style="margin-bottom: 30px; padding: 20px 0;">
+            <h1 style="font-size: 2.5rem;">Explore Courses</h1>
+            <p>Browse courses customized to your skill level and goals.</p>
+            
+            <!-- Category Filters -->
+            <div id="course-filters" style="display: flex; gap: 10px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
+                <button class="btn-primary filter-btn active" data-filter="all" style="background: rgba(99, 102, 241, 0.1); color: var(--accent-color); border: 1px solid rgba(99, 102, 241, 0.5);">All</button>
+                <button class="btn-secondary filter-btn" data-filter="Programming">Programming</button>
+                <button class="btn-secondary filter-btn" data-filter="Data Science">Data Science</button>
+                <button class="btn-secondary filter-btn" data-filter="Mathematics">Mathematics</button>
+            </div>
+        </header>
+
+        <section class="recommendations">
+            <div class="cards-grid">
+                <!-- Course 1 -->
+                <div class="card course-card" data-category="Programming">
+                    <div style="height: 120px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-bottom: 1px solid #f0f0f0;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Harvard_University_coat_of_arms.svg" alt="Harvard Logo" style="max-height: 70px; max-width: 80%;">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag tag-medium">Intermediate</span>
+                        <h3>CS50's Web Programming</h3>
+                        <p>Learn Python, JavaScript, and SQL by building apps.</p>
+                        <div class="card-footer">
+                            <span class="time">12 Weeks</span>
+                            <a href="https://cs50.harvard.edu/web/2020/" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.8rem; text-decoration: none; text-align: center;">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="card course-card" data-category="Data Science">
+                    <div style="height: 120px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-bottom: 1px solid #f0f0f0;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" alt="Kaggle Logo" style="max-height: 70px; max-width: 80%;">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag tag-high">Beginner</span>
+                        <h3>Intro to Machine Learning</h3>
+                        <p>Learn core Python concepts to build ML models.</p>
+                        <div class="card-footer">
+                            <span class="time">3 Hours</span>
+                            <a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.8rem; text-decoration: none; text-align: center;">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Course 3 -->
+                 <div class="card course-card" data-category="Programming">
+                    <div style="height: 120px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-bottom: 1px solid #f0f0f0;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png" alt="freeCodeCamp Logo" style="max-height: 50px; max-width: 80%;">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag tag-medium" style="background: rgba(255, 69, 105, 0.15); color: #ff4569; border-color: rgba(255, 69, 105, 0.3);">Advanced</span>
+                        <h3>Scientific Computing Python</h3>
+                        <p>Master complex logic and algorithms with Python.</p>
+                        <div class="card-footer">
+                            <span class="time">300 Hours</span>
+                            <a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.8rem; text-decoration: none; text-align: center;">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                 <div class="card course-card" data-category="Mathematics">
+                    <div style="height: 120px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-bottom: 1px solid #f0f0f0;">
+                        <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mit/mit.png" alt="MIT Logo" style="max-height: 50px; max-width: 80%;">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag tag-medium">Intermediate</span>
+                        <h3>Linear Algebra</h3>
+                        <p>MIT OpenCourseWare's classic Mathematics logic.</p>
+                        <div class="card-footer">
+                            <span class="time">35 Videos</span>
+                            <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.8rem; text-decoration: none; text-align: center;">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        // Make the buttons interactively responsive
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                // Remove active styling from all
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.className = 'btn-secondary filter-btn';
+                    b.style = '';
+                });
+                // Add active styling to clicked
+                const target = e.target;
+                target.className = 'btn-primary filter-btn active';
+                target.style = 'background: rgba(99, 102, 241, 0.1); color: var(--accent-color); border: 1px solid rgba(99, 102, 241, 0.5);';
+
+                // Filter logic
+                const filterValue = target.getAttribute('data-filter');
+                document.querySelectorAll('.course-card').forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

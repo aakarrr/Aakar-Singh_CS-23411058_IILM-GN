@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - StudyBuddy AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">StudyBuddy <span class="ai-badge">AI</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard">
+        <header class="hero" style="margin-bottom: 30px; padding: 20px 0;">
+            <h1 style="font-size: 2.5rem;">Your Dashboard</h1>
+            <p>Welcome back! Here is an overview of your AI-driven learning progress.</p>
+        </header>
+
+        <section class="recommendations">
+            <div class="section-header">
+                <h2>Current Stats</h2>
+            </div>
+            
+            <div class="cards-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+                <!-- Stat Card 1 -->
+                <div class="card" style="text-align: center; padding: 30px;">
+                    <h3 style="font-size: 2.5rem; color: #8a2be2;">12</h3>
+                    <p style="margin-bottom: 0;">Hours Learned This Week</p>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="card" style="text-align: center; padding: 30px;">
+                    <h3 style="font-size: 2.5rem; color: #4facfe;">3</h3>
+                    <p style="margin-bottom: 0;">Active Courses</p>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="card" style="text-align: center; padding: 30px;">
+                    <h3 style="font-size: 2.5rem; color: #43e97b;">85%</h3>
+                    <p style="margin-bottom: 0;">Goal Completion</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="recommendations" style="margin-top: 50px;">
+            <div class="section-header">
+                <h2>Continue Learning</h2>
+            </div>
+            
+            <div class="cards-grid">
+                <!-- Course Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <span class="tag tag-high">In Progress</span>
+                        <h3>Neural Networks Simplified</h3>
+                        <div style="background: rgba(0,0,0,0.1); height: 8px; border-radius: 4px; margin: 15px 0;">
+                            <div style="background: var(--accent-gradient); width: 65%; height: 100%; border-radius: 4px;"></div>
+                        </div>
+                        <p style="font-size: 0.85rem; margin-bottom: 15px;">65% Complete</p>
+                        <div class="card-footer" style="border-top: none; padding-top: 0;">
+                            <button class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Resume</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

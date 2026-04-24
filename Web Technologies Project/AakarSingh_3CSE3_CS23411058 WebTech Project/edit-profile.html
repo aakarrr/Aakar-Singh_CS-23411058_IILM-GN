@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - StudyBuddy AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Form specific styles */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            background: #f9fafb;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            padding: 12px 15px;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+            background: #ffffff;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b949e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+        }
+
+        select.form-control option {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            accent-color: var(--accent-color);
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">StudyBuddy <span class="ai-badge">AI</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard" style="max-width: 800px;">
+        <div class="section-header">
+            <h2>Complete Profile Registration</h2>
+            <span class="match-info">Customize your AI learning experience</span>
+        </div>
+
+        <div class="card" style="padding: 40px; margin-top: 20px;">
+            <!-- We use action="profile.html" so that submitting the form navigates back to the profile page -->
+            <form action="profile.html" method="GET" id="edit-profile-form">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" class="form-control" placeholder="e.g. Aakar" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Bio / Tagline</label>
+                    <input type="text" id="bio" class="form-control" placeholder="e.g. AI Engineering Student" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="learningPath">Primary Learning Path</label>
+                    <select id="learningPath" class="form-control">
+                        <option value="data-science">Data Science</option>
+                        <option value="web-dev">Web Development</option>
+                        <option value="machine-learning">Machine Learning</option>
+                        <option value="mathematics">Mathematics</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Skills & Interests</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label"><input type="checkbox" class="skill-checkbox" value="Python" checked> Python</label>
+                        <label class="checkbox-label"><input type="checkbox" class="skill-checkbox" value="Machine Learning" checked> Machine Learning</label>
+                        <label class="checkbox-label"><input type="checkbox" class="skill-checkbox" value="Web Dev" checked> Web Dev</label>
+                        <label class="checkbox-label"><input type="checkbox" class="skill-checkbox" value="React"> React</label>
+                        <label class="checkbox-label"><input type="checkbox" class="skill-checkbox" value="Cloud Computing"> Cloud Computing</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dailyGoal">Daily Goal (Hours)</label>
+                    <input type="number" id="dailyGoal" class="form-control" min="1" max="12" value="2" required>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 15px; margin-top: 40px;">
+                    <a href="profile.html" class="btn-secondary"
+                        style="text-decoration: none; display: inline-flex; align-items: center; padding: 12px 30px;">Cancel</a>
+                    <button type="submit" class="btn-primary">Save Profile</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

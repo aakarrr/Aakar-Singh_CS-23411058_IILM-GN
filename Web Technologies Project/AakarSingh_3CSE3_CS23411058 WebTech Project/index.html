@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-based Study Recommendation System to personalize your learning trajectory.">
+    <title>StudyBuddy AI - Personalized Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">StudyBuddy <span class="ai-badge">AI</span></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard">
+        <header class="hero">
+            <h1>What do you want to master today?</h1>
+            <p>Our AI analyzes your learning style to recommend the best resources tailored specifically for you.</p>
+            <div class="search-bar">
+                <select id="edu-level-input" class="edu-select" title="Select Education Level">
+                    <option value="Beginner / High School">High School</option>
+                    <option value="Intermediate / Undergraduate" selected>Undergrad</option>
+                    <option value="Advanced / Graduate">Graduate</option>
+                    <option value="Professional / Industry">Professional</option>
+                </select>
+                <div class="search-divider"></div>
+                <input type="text" id="topic-input" placeholder="e.g., Data Structures, Quantum Physics...">
+                <button class="btn-primary" id="recommend-btn">Get Recommendations</button>
+            </div>
+        </header>
+
+        <section class="recommendations">
+            <div class="section-header">
+                <h2>Top AI Recommendations For You</h2>
+                <span class="match-info">Based on your recent interest in "Machine Learning"</span>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div style="height: 120px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-bottom: 1px solid #f0f0f0;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Harvard_University_coat_of_arms.svg" alt="Harvard Logo" style="max-height: 70px; max-width: 80%;">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag tag-high">98% Match</span>
+                        <h3>CS50's Web Programming</h3>
+                        <p>Learn Python, JavaScript, and SQL by building apps.</p>
+                        <div class="card-footer">
+                            <span class="time">⏱️ 12 Weeks</span>
+                            <a href="https://cs50.harvard.edu/web/2020/" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.8rem; text-decoration: none; text-align: center;">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div style="height: 120px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-bottom: 1px solid #f0f0f0;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" alt="Kaggle Logo" style="max-height: 70px; max-width: 80%;">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag tag-high">92% Match</span>
+                        <h3>Intro to Machine Learning</h3>
+                        <p>Learn core Python concepts to build ML models.</p>
+                        <div class="card-footer">
+                            <span class="time">⏱️ 3 Hours</span>
+                            <a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.8rem; text-decoration: none; text-align: center;">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div style="height: 120px; display: flex; align-items: center; justify-content: center; background: #ffffff; border-bottom: 1px solid #f0f0f0;">
+                        <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mit/mit.png" alt="MIT Logo" style="max-height: 50px; max-width: 80%;">
+                    </div>
+                    <div class="card-content">
+                        <span class="tag tag-medium">85% Match</span>
+                        <h3>Linear Algebra</h3>
+                        <p>MIT OpenCourseWare's classic Mathematics logic.</p>
+                        <div class="card-footer">
+                            <span class="time">⏱️ 35 Videos</span>
+                            <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.8rem; text-decoration: none; text-align: center;">Enroll</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more-container" id="load-more-container" style="display: none; text-align: center; margin-top: 40px;">
+                <button class="btn-secondary" id="load-more-btn" style="padding: 12px 30px; font-weight: 600;">Load More Recommendations &darr;</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

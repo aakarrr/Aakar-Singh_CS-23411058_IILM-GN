@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to StudyBuddy AI">
+    <title>Get Started - StudyBuddy AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .onboarding-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.1) 0%, transparent 40%),
+                        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.1) 0%, transparent 40%),
+                        var(--bg-color);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="onboarding-container">
+        <div class="login-card" style="max-width: 500px;">
+            <div class="login-header">
+                <div class="logo">StudyBuddy <span class="ai-badge">SB</span></div>
+                <h2>Let's Personalize Your AI</h2>
+                <p>Welcome aboard! Tell us what you want to master.</p>
+            </div>
+            <form class="login-form" id="onboarding-form">
+                
+                <!-- Primary Interest -->
+                <div class="input-group">
+                    <label for="primary-interest">Primary Area of Interest</label>
+                    <div class="input-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="text" id="primary-interest" placeholder="e.g. Astrophysics, Python, Art History" required>
+                    </div>
+                </div>
+
+                <!-- Education Level -->
+                <div class="input-group" style="margin-top: 20px;">
+                    <label for="onboarding-edu-level">Current Education Level</label>
+                    <div class="input-wrapper" style="padding: 0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon" style="position: absolute; left: 15px; top: 13px;"><path d="m4 6 8-4 8 4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M14 22v-4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v4"/><polyline points="18 5 18 15 22 17"/></svg>
+                        <select id="onboarding-edu-level" style="width: 100%; border: none; outline: none; background: transparent; padding: 12px 15px 12px 45px; color: var(--text-primary); font-family: inherit; font-size: 0.95rem; cursor: pointer; appearance: none;">
+                            <option value="Beginner / High School">High School</option>
+                            <option value="Intermediate / Undergraduate" selected>Undergraduate</option>
+                            <option value="Advanced / Graduate">Graduate</option>
+                            <option value="Professional / Industry">Professional</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary login-btn" style="margin-top: 35px;">Generate My Courses &rarr;</button>
+
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
